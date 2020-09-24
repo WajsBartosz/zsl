@@ -91,12 +91,22 @@ echo "$x<br>";
   echo 'Typ danych zmiennej $text:', gettype($x), '<br>';
   echo 'Typ danych zmiennej $text:', gettype($text), '<br>';
 
+
+ // bool
   $x=(bool)$text1;
   echo $x; // false (0 nie wyswietla)
+ // unset powoduje wyczyszcenie wartości zmiennej
+  $test=20;
+  echo '<br>Typ danych zmiennej $test:', gettype($test), '<br>';
+  echo $test;
+  $test=(unset)$test;
+  echo "<br>$test<br>";
+  echo '<br>Typ danych zmiennej $test:', gettype($test), '<br>';
 
 
+ // rozmiar typu integer
 
-
+ echo PHP_INT_SIZE; //8
 
 
 
