@@ -9,7 +9,7 @@
     <?php
     if (!empty($_GET['surname']))     //empty sprawdza czy jest puste a isset czy jest wypelnione, ! powoduje przeciwienstwo danej komendy
     {
-      ob_clean();      
+      ob_clean();
       $surname=ucwords(strtolower(trim($_GET['surname'])));
       $name=ucwords(strtolower(trim($_GET['name'])));
       echo "Imię i naziwsko: $name  $surname <hr>";
