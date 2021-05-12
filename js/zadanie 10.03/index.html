@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      #main{
+        width:750px;
+      }
+      #a,#b,#c,#d,#e{
+        width:150px;
+        height:150px;
+        float:left;
+        box-sizing:border-box;
+      }
+      #f{
+        height:150px;
+        width:100%;
+        float:left;
+        box-sizing:border-box;
+        text-align:center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id='main'>
+      <div id='a'>
+        <img src='left_arrow.png'>
+      </div>
+      <div id='b'>
+      </div>
+      <div id='c'>
+      </div>
+      <div id='d'>
+      </div>
+      <div id='e'>
+        <img src='right_arrow.png'>
+      </div>
+      <div id='f'>
+      </div>
+    </div>
+
+    <script>
+      var array = [1,2,3,4,5,6,7];
+      var left_button = document.getElementById('a');
+      var left = document.getElementById('b');
+      var middle = document.getElementById('c');
+      var right = document.getElementById('d');
+      var right_button = document.getElementById('e');
+      var bottom = document.getElementById('f');
+      var a = 1
+
+      left.innerHTML="<img src='photo"+array[a-1]+".png'>"
+      middle.innerHTML="<img src='photo"+array[a]+".png'>"
+      bottom.innerHTML="<img src='photo"+array[a]+".png'>"
+      right.innerHTML="<img src='photo"+array[a+1]+".png'>"
+
+      right_button.onclick = function(){
+        a++;
+        if(a<6){
+          left.innerHTML="<img src='photo"+array[a-1]+".png'>"
+          right.innerHTML="<img src='photo"+array[a+1]+".png'>"
+        }
+        else if(a==6){
+          left.innerHTML="<img src='photo"+array[a-1]+".png'>"
+          right.innerHTML="<img src='photo"+array[0]+".png'>"
+        }
+        else{
+          a=0;
+          left.innerHTML="<img src='photo"+array[6]+".png'>"
+          right.innerHTML="<img src='photo"+array[a+1]+".png'>"
+        }
+        middle.innerHTML="<img src='photo"+array[a]+".png'>"
+        bottom.innerHTML="<img src='photo"+array[a]+".png'>"
+      }
+
+
+      left_button.onclick = function(){
+        a--;
+        if(a>0){
+          left.innerHTML="<img src='photo"+array[a-1]+".png'>"
+          right.innerHTML="<img src='photo"+array[a+1]+".png'>"
+        }
+        else if(a==0){
+          left.innerHTML="<img src='photo"+array[6]+".png'>"
+          right.innerHTML="<img src='photo"+array[a+1]+".png'>"
+        }
+        else{
+          a=6;
+          left.innerHTML="<img src='photo"+array[a-1]+".png'>"
+          right.innerHTML="<img src='photo"+array[0]+".png'>"
+        }
+        middle.innerHTML="<img src='photo"+array[a]+".png'>"
+        bottom.innerHTML="<img src='photo"+array[a]+".png'>"
+      }
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <title>Zad3</title>
+  </head>
+  <body>
+    <form id="formularz">
+      <input type="text" id="rozmiar" placeholder="rozmiar czcionki"></input><br><br>
+      <input type="text" id="kolor" placeholder="kolor czcionki"></input><br><br>
+      <input type="text" id="rodzaj" placeholder="rodzaj czcionki"</input><br><br>
+      <input type="button" id="przycisk" value="przycisk"></input>
+    </form>
+    <span id="akapit"></span>
+    <script>
+
+    var akapit = document.getElementById("akapit");
+    var rozmiar = document.getElementById("rozmiar");
+    var kolor = document.getElementById("kolor");
+    var rodzaj = document.getElementById("rodzaj");
+    var przycisk = document.getElementById("przycisk");
+    przycisk.onclick = function(){
+
+    akapit.innerHTML = "Wajs Bartosz";
+    akapit.style.fontSize = rozmiar.value;
+    akapit.style.color = kolor.value;
+    akapit.style.fontFamily = rodzaj.value;
+    }
+    </script>
+  </body>
+</html>

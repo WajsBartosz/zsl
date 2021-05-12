@@ -1,0 +1,11 @@
+.container{
+    margin: auto;
+    width:800px;
+}
+.menu{
+    float:left;
+    width:200px;
+}
+.tresc{
+    float:left;
+}

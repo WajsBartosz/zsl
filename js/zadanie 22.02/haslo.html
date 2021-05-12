@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miernik Jakości hasła</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <div class="baner">
+        <a href="index.html">Sprawdź swoje hasło</a>
+    </div>
+    <div class="panellewy">
+        <h2>Wybierz</h2>
+        <ol>
+            <li><a href="haslo.html">Sprawdź hasło</a></li>
+            <li><a href="zasady.html">Zasady tworzenia hasła</a></li>
+        </ol>
+    </div>
+    <div class="panelprawy">
+        <p>Twoje hasło:  <input type="password" id="haslo">  
+        <input type="button" value="Sprawdź" onclick="funkcja()"></p>
+        <p id=akapit></p>
+        <script>
+            function funkcja(){
+                var x=haslo.value;
+                if(x==""){
+                    akapit.style.color="red"
+                    akapit.innerHTML="WPISZ HASŁO"
+                }
+                else if(x.search("[0-9]")>=0 && x.length>6){
+                    akapit.style.color="green"
+                    akapit.innerHTML="DOBRE"
+                }
+                else if(x.search("[0-9]")>=0 && x.length>4){
+                    akapit.style.color="blue"
+                    akapit.innerHTML="ŚREDNIE"
+                }
+                else{
+                    akapit.style.color="yellow"
+                    akapit.innerHTML="SŁABE"
+                }
+
+            }
+        </script>
+    </div>
+    <div class="stopka">
+        <h3>Miernik jakości hasła</h3>
+        <p>Stronę opracował: Wajs Bartosz</p>
+
+    </div>
+</body>
+</html>

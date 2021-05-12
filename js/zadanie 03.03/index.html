@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 03.03</title>
+</head>
+<body>
+    <h3>Dodaj wpis</h3>
+    <input type="text" placeholder="Podaj wpis" id="tekst" autofocus><br><br>
+    <input type="submit" value="Dodaj wpis" id="wyslij">
+    <p id="akapit"></p>
+    <script>
+        var tablica=new Array();
+        var tmp=0;
+        document.getElementById("wyslij");
+        wyslij.onclick=function(){
+            tekst=document.getElementById("tekst").value;
+            if(tekst==""){
+                alert("Wpisz coś w pole");
+            }
+            else{   
+                tekst=tekst.toLowerCase();
+                tablica[tmp]=tekst.charAt(0).toUpperCase() + tekst.slice(1);
+                tmp++;
+                tablica.sort();
+                if(!tablica.length)
+                akapit.innerHTML=tablica+",";
+                else{
+                    akapit.innerHTML=tablica+".";
+                }
+            }
+            document.getElementById('tekst').value='';
+            document.getElementById('tekst').focus();
+        }
+      
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="PL" dir="ltr">
+  <head>
+    <style>
+    .a span{
+      cursor: pointer;
+      display: inline;
+  }
+  #maly{
+    font-size:15px;
+  }
+  #sredni{
+    font-size:30px;
+  }
+  #duzy{
+    font-size:45px;
+  }
+    .tekst{
+      clear:both;
+      border: 1px solid black;
+      border-radius: 10px;
+      background-color: grey;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    </style>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="a">
+      <span id="maly">A</span>
+      <span id="sredni">A</span>
+      <span id="duzy">A</span>
+    </div>
+    <div class="tekst">
+      <h2>lorem ipsum</h2>
+      <p id="tekst">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      when an unknown printer took a galley of type and scrambled it to make a
+      type specimen book. It has survived not only five centuries, but also the
+      leap into electronic typesetting, remaining essentially unchanged. It was
+      popularised in the 1960s with the release of Letraset sheets containing
+      Lorem Ipsum passages, and more recently with desktop publishing software
+      like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </div>
+    <script>
+      var maly=document.getElementById('maly')
+      var sredni=document.getElementById('sredni')
+      var duzy=document.getElementById('duzy')
+
+      maly.onclick=function(){
+        document.getElementById('tekst').style.fontSize="15px";
+      }
+      sredni.onclick=function(){
+        document.getElementById('tekst').style.fontSize="30px";
+      }
+      duzy.onclick=function(){
+        document.getElementById('tekst').style.fontSize="45px";
+      }
+      maly.onmouseover=function(){
+        document.getElementById('maly').style.color="red";
+      }
+      maly.onmouseout=function(){
+        document.getElementById('maly').style.color="black";
+      }
+      sredni.onmouseover=function(){
+        document.getElementById('sredni').style.color="red";
+      }
+      sredni.onmouseout=function(){
+        document.getElementById('sredni').style.color="black";
+      }
+      duzy.onmouseover=function(){
+        document.getElementById('duzy').style.color="red";
+      }
+      duzy.onmouseout=function(){
+        document.getElementById('duzy').style.color="black";
+      }
+
+
+
+    </script>
+  </body>
+</html>

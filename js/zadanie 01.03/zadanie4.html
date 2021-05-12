@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 4</title>
+</head>
+<body>
+    <script>
+        var tablica= new Array(10);
+        var tablica2=new Array(10);
+        for(var i=0;i<10;i++){
+            tablica[i]=Math.round(Math.random()*100+1);
+            tablica2[i]=Math.round(Math.random()*100+1);
+        }
+        document.write("Tablica 1: "+tablica+"<br>");
+        document.write("Tablica 2: "+tablica2+"<br>");
+        tablica.reverse();
+        document.write("Tablica 1 od tyłu: "+tablica+"<br>");
+        tablica.sort();
+        document.write("Tablica 1 posortowana: "+tablica+"<br>");
+        var max=0;
+        var min=100;
+        for(var i=0;i<10;i++){
+            if(tablica2[i]>max){
+                max=tablica2[i];
+            }
+            else if (tablica2[i]<min){
+                min=tablica2[i];
+            }
+        }
+        document.write("Najmniejszy element w tablicy 2: "+min+"<br>");
+        document.write("Największy element w tablicy 2: "+max+"<br>");
+        tablica2.splice(5,2, 13, 4);
+        document.write("Tablica 2 po zmianie indeksów: "+tablica2+"<br>");
+        tablica.splice(0,1);
+        tablica.splice(10,0,99);
+        document.write("Tablica 1 po usunięciu pierwszego elementu: "+tablica+"<br>");
+        var tablica3=new Array(10);
+        for (var i=0;i<10;i++){
+            tablica3[i]=tablica[i]+tablica2[i];
+        }
+        document.write("Tablica 3: "+tablica3+"<br>");
+        document.write("Tablica 3 parzyste liczby: ");
+        for (var i=0;i<10;i++){
+            if(tablica3[i]%2==0){
+                document.write(tablica3[i]+"; ");
+            }
+        }
+    </script>
+</body>
+</html>

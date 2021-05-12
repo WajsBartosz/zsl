@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+  </head>
+  <div class="obramowanie">
+    <h2>Pokaż na co cię stać!</h2>
+  <p id="akapit"></p>
+  <body>
+    <script>
+        var x=Math.floor(Math.random()*10+1);
+        var y=Math.floor(Math.random()*10+1);
+        akapit.innerHTML+=x;
+        akapit.innerHTML+=" + ";
+        akapit.innerHTML+=y;
+        akapit.innerHTML+=" = ";
+        akapit.innerHTML+="<input id='wynik' type='number'></input><br><br><input id='guzik' type='submit' value='sprawdź'><br><br>";
+        var guzik=document.getElementById('guzik');
+        guzik.onclick=function()
+        {
+          var wynik=document.getElementById('wynik').value;
+            if (wynik==x+y)
+            {
+              document.getElementById('wynik').style.backgroundColor="green";
+            }
+            else{
+              document.getElementById('wynik').style.backgroundColor="red";
+              document.getElementById('wynik').onclick=function()
+              {
+                location.reload();
+              }
+            }
+      }
+    </script>
+  </div>
+  </body>
+</html>

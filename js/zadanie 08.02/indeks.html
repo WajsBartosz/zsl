@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Podaj hasło
+        <input type="password" id="haslo">
+        <input type="submit" id="sub" value="sprawdź">
+    </p>
+    <p id="x">
+
+    </p>
+    <script>
+        document.getElementById("sub");
+        sub.onclick=function(){
+            var haslo=document.getElementById("haslo").value;
+            if (haslo.length>=5){
+                x.innerHTML="Hasło poprawne, podałeś hasło: "
+                x.innerHTML+=haslo.toUpperCase();
+            }
+            else if (haslo.length==0){
+                x.innerHTML="Wprowadź hasło."
+            }
+            else{
+                x.innerHTML="Hasło jest za krótkie.";
+            }
+            
+
+        }
+   
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="PL" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>zad1</title>
+  </head>
+  <body>
+    <p id="imie">Wajs Bartosz</p><br>
+    <script>
+      var x=document.getElementById("imie")
+      imie.onclick=function()
+      {
+        x.innerHTML="Wajs Bartosz<br>";
+        var y=parseInt(prompt("Podaj początek przedziału: "));
+        var z=parseInt(prompt("Podaj koniec przedziału: "));
+        if (y>z)
+        {
+          x.innerHTML+="Ciąg malejący: ";
+          while (y>z)
+          {
+            if(y%2==0)
+            {
+              x.innerHTML+="<b><span style='color:red;'>"+y+"</span></b>"+", ";
+            }
+            else if (y%2==1)
+            {
+              x.innerHTML+="<span style='color:blue;'><u>"+y+"</span></u>"+", ";
+            }
+            y--;
+          }
+          if(y%2==0)
+          {
+            x.innerHTML+="<b><span style='color:red;'>"+y+"</span></b>";
+          }
+          else if (y%2==1)
+          {
+            x.innerHTML+="<span style='color:blue;'><u>"+y+"</span></u>";
+          }
+
+        }
+        else if (z>y)
+        {
+          x.innerHTML+="Ciąg rosnący: ";
+          while (y<z)
+          {
+            if(y%2==0)
+            {
+              x.innerHTML+="<b><span style='color:red;'>"+y+"</span></b>"+", ";
+            }
+            else if (y%2==1)
+            {
+              x.innerHTML+="<span style='color:blue;'><u>"+y+"</span></u>"+", ";
+            }
+              y++;
+          }
+          if(y%2==0)
+          {
+            x.innerHTML+="<b><span style='color:red;'>"+y+"</span></b>";
+          }
+          else if (y%2==1)
+          {
+            x.innerHTML+="<span style='color:blue;'><u>"+y+"</span></u>";
+          }
+        }
+
+      }
+
+
+    </script>
+  </body>
+</html>

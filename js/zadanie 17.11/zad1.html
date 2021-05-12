@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="PL" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>zad1</title>
+    <style>
+      #kwadrat{
+        height:100px;
+        width:100px;
+        border: solid black 2px;
+        backgroundColor: blue;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id=kwadrat></div>
+
+    <script>
+      var kwadrat=document.getElementById("kwadrat")
+      kwadrat.onmouseover=function()
+      {
+          kwadrat.style.height="200px";
+          kwadrat.style.width="200px";
+          kwadrat.style.border="solid black 4px";
+          kwadrat.style.backgroundColor="red";
+
+      }
+      kwadrat.onmouseout=function()
+      {
+        kwadrat.style.height="150px";
+        kwadrat.style.width="150px";
+        kwadrat.style.border="solid black 10px";
+        kwadrat.style.backgroundColor="green";
+      }
+    </script>
+  </body>
+</html>

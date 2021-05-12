@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zadanie 24.02</title>
+</head>
+<body>
+        
+    </p>
+    <script>
+        var tablica=[10,9,45,420,1337,13,37,44,5,7];
+        document.write("Tablica na początku:"+'<br>');
+        for (var i=0;i<tablica.length;i++){
+            if (i<tablica.length-1)
+                document.write(tablica[i]+", ");
+            else
+                document.write(tablica[i]);
+            }
+        document.write("<br>");
+        
+        tablica.push(100);
+        document.write("Tablica po dodaniu ostatniego elementu:"+'<br>'); 
+            for (var i=0;i<tablica.length;i++){
+                if (i<tablica.length-1)
+                    document.write(tablica[i]+", ");
+                else
+                    document.write(tablica[i]);
+            }  
+        document.write("<br>");
+        tablica.unshift(2137);
+        document.write("Tablica po dodaniu początkowego elementu:"+'<br>');
+        for (var i=0;i<tablica.length;i++){
+                if (i<tablica.length-1)
+                    document.write(tablica[i]+", ");
+                else
+                    document.write(tablica[i]);
+            } 
+        document.write("<br>");    
+        tablica.pop();
+        document.write("Tablica po usunięciu ostatniego elementu:"+'<br>');
+        for (var i=0;i<tablica.length;i++){
+                if (i<tablica.length-1)
+                    document.write(tablica[i]+", ");
+                else
+                    document.write(tablica[i]);
+        }
+        document.write("<br>");
+        tablica.shift();
+        document.write("Tablica po usunięciu pierwszego elementu:"+'<br>');
+        for (var i=0;i<tablica.length;i++){
+                if (i<tablica.length-1)
+                    document.write(tablica[i]+", ");
+                else
+                    document.write(tablica[i]);
+        }
+        document.write("<br>");
+        tablica.reverse();
+        document.write("Tablica odwrócona:"+'<br>');
+        for (var i=0;i<tablica.length;i++){
+                if (i<tablica.length-1)
+                    document.write(tablica[i]+", ");
+                else
+                    document.write(tablica[i]);
+        }
+        document.write("<br>");
+        tablica.sort();
+        document.write("Tablica posortowana:"+'<br>');
+        for (var i=0;i<tablica.length;i++){
+                if (i<tablica.length-1)
+                    document.write(tablica[i]+", ");
+                else
+                    document.write(tablica[i]);
+        }
+        document.write("<br>");
+
+    </script>
+</body>
+</html>

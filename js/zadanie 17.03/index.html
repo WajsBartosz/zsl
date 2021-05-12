@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <input type="text" id="imie" placeholder="imię"><br><br>
+        <select id="lista">
+            <option value="3B1T">3B1T</option>
+            <option value="3B2G">3B2G</option>
+            <option value="3B3F">3B3F</option>
+        </select><br><br>
+        <input type="radio" name="kolor" value="red">Czerwony
+        <input type="radio" name="kolor" value="blue">Niebieski
+        <input type="radio" name="kolor" value="green">Zielony<br><br>
+        <input type="checkbox" id="styl1" value="bold">Pogrubienie
+        <input type="checkbox" id="styl2" value="italic">Pochylenie
+        <input type="checkbox" id="styl3" value="underline">Podkreślenie<br><br>
+        <input type="submit" id="submit" placeholder="wyślij"><br><br>
+    <p id=wynik></p>
+    <script>
+        var guzik=document.getElementById('submit');
+        var wynik=document.getElementById('wynik');
+        guzik.onclick=function(){
+            wynik.style.fontWeight="normal";
+            wynik.style.fontStyle="normal";
+            wynik.style.textDecoration="none";
+            var imie=document.getElementById('imie').value;
+            var lista=document.getElementById('lista').value;
+            if(imie==""){
+                alert("Wprowadź imię.");
+            }
+            var x=document.getElementsByName('kolor');
+            for (var i=0;i<x.length;i++){
+                if(x[i].checked) var kolor=x[i].value;
+            }
+            var pogrubienie=document.getElementById("styl1");
+            if(pogrubienie.checked)
+            wynik.style.fontWeight=pogrubienie.value; 
+            var pochylenie=document.getElementById("styl2");
+            if(pochylenie.checked)
+            wynik.style.fontStyle=pochylenie.value; 
+            var podkreslenie=document.getElementById("styl3");
+            if(podkreslenie.checked)
+            wynik.style.textDecoration=podkreslenie.value; 
+            wynik.style.color=kolor;
+            wynik.innerHTML="Witaj "+imie+" w klasie "+lista+"!";
+        }
+    </script>
+</body>
+</html>

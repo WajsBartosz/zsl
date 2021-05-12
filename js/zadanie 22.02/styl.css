@@ -1,0 +1,50 @@
+.baner{
+    text-align: center;
+    background-color: #829EB9;
+    height: 50px;
+    font-family: Arial;
+}
+.panellewy{
+    background-color: #B3C6D9;
+    height: 600px;
+    width: 25%;
+    float: left;
+}
+.panelprawy{
+    background-color: #E0E9F1;
+    height:600px;
+    width:75%;
+    float:left;
+    text-align: center;
+
+}
+.stopka{
+    background-color: #829EB9;
+    font-family: Arial;
+    text-align: right;
+}
+img{
+    padding:10px;
+    margin: 30px;
+    border: 2px;
+    border-style: dashed;
+    border-color: #b3c6d9;
+}
+table{
+    margin:30px;
+    border: 2px solid;
+    width:70%;
+}
+td, th{
+    border: 2px solid;
+}
+th{
+    background: #B3C6D9;
+}
+tr:hover *{
+    background: blue;
+    color: white;
+}
+p{
+    margin:30px;
+}

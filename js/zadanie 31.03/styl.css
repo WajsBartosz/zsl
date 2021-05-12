@@ -1,0 +1,63 @@
+body{
+    background-color:#99FFCC;
+}
+.kontener{
+    width: 1000px;
+    margin: auto;
+}
+.baner{
+    background-color: #99FF66;
+    height:200px;
+}
+.blokmenu{
+    background-color: #66CCFF;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.blokmenu a{
+    color:#006666;
+    margin: 50px;
+    font-size:200%;
+    text-decoration:none;
+}
+
+.blok1{
+    width:310px;
+    padding:10px;
+    float:left;
+
+}
+.blok2{
+    width:310px;
+    padding:10px;
+    float:left;
+}
+.blok3{
+    width:310px;
+    padding:10px;
+    float:left;
+}
+.stopka{
+    clear:both;
+    background-color: #66CCFF;
+    color: #006666;
+    text-align: right;
+    height: 30px;
+    padding: 20px;
+}
+.reset{
+    background-color: #ff0000;
+}
+.przycisk{
+    background-color: #00FF00;
+}
+h2,h3{
+    text-align: center;
+}
+form{
+    text-align:center;
+}
+#akapit{
+    text-align:center;
+}

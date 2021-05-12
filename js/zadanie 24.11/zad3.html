@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="PL" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form>
+      Bok 1<input type="number" id="b1"><br><br>
+      Bok 2<input type="number" id="b2"><br><br>
+      Bok 3<input type="number" id="b3"><br><br>
+      <input type="button" id="guzik" value="wyślij"><br><br>
+    </form>
+    <span id="akapit"></span>
+    <script>
+      function suma(b1,b2,b3)
+      {
+        if (b1<b2+b3 && b2<b3+b1 && b3<b2+b1)
+        {
+        return "Z podanych boków można zbudować trójkąt";
+        }
+        else {
+          return "Z podanych boków nie można zbudować trójkąta";
+        }
+      }
+      var guzik=document.getElementById('guzik');
+      guzik.onclick=function()
+        {
+          var bok1=parseInt(document.getElementById("b1").value);
+          var bok2=parseInt(document.getElementById("b2").value);
+          var bok3=parseInt(document.getElementById("b3").value);
+          var trojkat= suma(bok1,bok2,bok3);
+          akapit.innerHTML=trojkat;
+        }
+
+
+    </script>
+  </body>
+</html>

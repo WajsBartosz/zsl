@@ -1,0 +1,1 @@
+confirm ("Komunikat z pliku");

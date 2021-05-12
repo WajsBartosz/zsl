@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+<title>Zadanko iteracje</title>
+<meta charset="utf-8"/>
+</head>
+
+
+<body>
+<script>
+var ilosc=parseInt(prompt("podaj liczbe"));
+var x=0;
+if (ilosc>=0)
+{
+document.write ("For <br>");
+for (var i=0; i<=ilosc;i++)
+{
+document.write(i+"<br>");
+}
+document.write("<hr>");
+document.write ("While <br>");
+while (x<=ilosc)
+{
+document.write(x+"<br>");
+x++;
+}
+document.write("<hr>");
+document.write ("Do while <br>");
+x=0;
+do 
+{
+document.write(x+"<br>");
+x++;
+}while (x<=ilosc);
+	document.write("<hr>");
+}
+else
+	{
+	document.write ("Ujemne <br>");
+		for (var i=ilosc; i<=0; i++)
+			{
+				document.write(i+"<br>");
+			}
+
+	}
+</script>
+
+
+
+
+</body>
+
+
+
+
+
+</HTML>

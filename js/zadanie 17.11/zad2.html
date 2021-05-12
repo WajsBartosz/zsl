@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="PL" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>zad1</title>
+    <style>
+      #imie{
+        font-size:20px;
+        color: red;
+        font-family:"Times New Roman", Times, serif;
+      }
+
+    </style>
+  </head>
+  <body>
+    <p id=imie>Wajs Bartosz</p>
+
+    <script>
+      var imie=document.getElementById("imie")
+      imie.ondblclick=function()
+      {
+        imie.style.fontSize="40px";
+        imie.style.textDecoration="underline";
+        imie.style.fontWeight="bold";
+
+      }
+    </script>
+  </body>
+</html>

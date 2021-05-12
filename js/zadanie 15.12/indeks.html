@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="PL" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      #container{
+          width:2000px;
+          height: 600px;
+      }
+      #gora {
+        height: 299px;
+        width: 1200px;
+        border: 1px solid black;
+      }
+      #dol1{
+        height: 299px;
+        width:40%;
+        border: 1px solid black;
+        float:left;
+        padding-left: 30px;
+      }
+      #dol2{
+        width:60%;
+        height: 299px;
+        border: 1px solid black;
+      }
+      #menu{
+        font-size: 40px;
+
+      }
+      #opis,#jakatoliczba,#liczbycalkowite,#akapit{
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="gora">
+        <image src="matematyka.jpg" height=299 width=1200px>
+      </div>
+      <div id="dol1">
+        <p id="menu">MENU</p>
+        <p id="opis">Opis</p>
+        <p id="jakatoliczba">Jaka to liczba?</p>
+        <p id="liczbycalkowite">Liczby całkowite z zakresu</p>
+      </div>
+      <div id="dol2">
+        <p id="akapit"></p>
+      </div>
+      </div>
+      <script>
+        var baner=document.getElementById('gora');
+        baner.onclick=function(){
+          akapit.innerHTML=" ";
+        }
+        var opis=document.getElementById('opis');
+        opis.onclick=function(){
+          akapit.innerHTML="Wajs Bartosz";
+        }
+        var lc=document.getElementById('liczbycalkowite');
+        lc.onclick=function(){
+          var l1=parseInt(prompt("Podaj liczbę początkową"));
+          var l2=parseInt(prompt("Podaj liczbę końcową"));
+          akapit.innerHTML="";
+          if (l1>l2)
+          {
+            while(l1!=l2)
+            {
+              akapit.innerHTML+=l1;
+              akapit.innerHTML+=" ";
+              l1--;
+            }
+            akapit.innerHTML+=l1;
+          }
+          else if(l2>l1)
+          {
+            while(l1!=l2)
+            {
+              akapit.innerHTML+=l1;
+              akapit.innerHTML+=" ";
+              l1++;
+            }
+            akapit.innerHTML+=l1;
+          }
+        }
+        var jtl=document.getElementById('jakatoliczba');
+        jtl.onclick=function(){
+          var haslo=prompt("Podaj hasło");
+          if (haslo=="liczba"){
+            var x=parseInt(prompt("Podaj liczbę całkowitą"));
+            if (x>0){
+              akapit.innerHTML="Liczba ";
+              akapit.innerHTML+=x;
+              akapit.innerHTML+=" jest dodatnia";
+            }
+            if (x==0){
+              akapit.innerHTML="Liczba ";
+              akapit.innerHTML+=x;
+              akapit.innerHTML+=" to zero";
+            }
+            if (x<0){
+              akapit.innerHTML="Liczba ";
+              akapit.innerHTML+=x;
+              akapit.innerHTML+=" jest ujemna";
+            }
+          }
+          else{
+            akapit.innerHTML="Niepoprawne hasło";
+          }
+        }
+
+      </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>zad2</title>
+  </head>
+  <body>
+    <form id="formularz">
+      <input type="number" id="liczba1" placeholder="liczba 1"></input>
+      <input type="number" id="liczba2" placeholder="liczba 2"></input>
+      <input type="button" id="przycisk" value="wyślij">
+    </form>
+    <p id="akapit"></p>
+    <script>
+      var akapit=document.getElementById("akapit")
+      var x=document.getElementById("przycisk")
+      var liczba1=document.getElementById("liczba1")
+      var liczba2=document.getElementById("liczba2")
+
+      przycisk.onclick=function()
+      {
+        akapit.innerHTML="Liczba 1= "+liczba1.value+", Liczba 2= "+liczba2.value+"<br>";
+        if (liczba1.value>liczba2.value)
+        {
+          akapit.innerHTML+="Liczba 1 jest większa";
+        }
+        else
+        {
+          akapit.innerHTML+="Liczba 2 jest większa";
+        }
+        liczba1.value="";
+        liczba2.value="";
+
+
+      }
+
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zadanie 26.01</title>
+</head>
+<body>
+    <div class=zad1>
+    <h2>zad 1</h2>
+    Dzisiaj jest:<br>
+    <p id="dzien">Dzień: </p>
+    <p id="miesiac">Miesiąc: </p>
+    <p id="rok">Rok: </p>
+    
+    <script>
+      var data = new Date();
+      var data1=data.getDate();
+      var data2=data.getMonth()+1;
+      var data3=data.getFullYear();
+      dzien.innerHTML+=data1;
+      miesiac.innerHTML+=data2;
+      rok.innerHTML+=data3;
+
+
+    </script>
+    </div>
+    <div class=zad2>
+        <h2>zad 2</h2>
+        <p id="zad2"></p>
+        <script>
+            var month=data.getMonth();
+            var x="";
+            switch(month){
+                case 0:
+                month="stycznia";
+                    break;
+                case 1:
+                month="lutego";
+                    break;
+                case 2:
+                month="marca";
+                    break;
+                case 3:
+                month="kwietnia";
+                    break;
+                case 4:
+                month="maja";
+                    break;  
+                case 5:
+                month="czerwca";
+                    break;
+                case 6:
+                month="lipca";
+                    break;  
+                case 7:
+                month="sierpnia";
+                    break;  
+                case 8:
+                month="września";
+                    break;  
+                case 9:
+                month="października";
+                    break;  
+                case 10:
+                month="listopada";
+                    break;  
+                case 11:
+                month="grudnia";
+                    break;        
+                
+            }
+            zad2.innerHTML+=data1+" "+month+" "+data3+" roku";
+        </script>
+    </div>
+    <div class=zad2>
+        <h2>zad 3</h2>
+        <p id=zad3></p>
+        <script>
+            var y=data.getDay();
+            switch(y){
+                case 0:
+                    y="niedziela";
+                    break;
+                case 1:
+                    y="poniedziałek";
+                    break;
+                case 2:
+                    y="wtorek";
+                    break;
+                case 3:
+                    y="środa";
+                    break;
+                case 4:
+                    y="czwartek";
+                    break;
+                case 5:
+                    y="piątek";
+                    break;
+                case 6:
+                    y="sobota";
+                    break;
+            }
+            var sekundy=data.getSeconds();
+            var minuty=data.getMinutes();
+            var godziny=data.getHours();
+            zad3.innerHTML+=data1+" "+month+" "+data3+".r, "+y+" "+godziny+":"+minuty+":"+sekundy;
+            setInterval("location.reload()",1000);
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<script>
+var dzien=parseInt (prompt("Uzytkowniku liczbe od 1 do 7"));
+</script>
+</head>
+<body>
+<script>
+if (dzien==1)
+document.write("Poniedziałek"+"<br>");
+else if (dzien==2)
+document.write("Wtorek"+"<br>");
+else if (dzien==3)
+document.write("Środa"+"<br>");
+else if (dzien==4)
+document.write("Czwartek"+"<br>");
+else if (dzien==5)
+document.write("Piątek"+"<br>");
+else if (dzien==6)
+document.write("Sobota"+"<br>");
+else if (dzien==7)
+document.write("Niedziela"+"<br>");
+else 
+document.write("Podałeś złą wartość"+"<br>");
+
+
+
+</script>
+<script>
+switch (dzien)
+{
+case 1:
+{
+document.write("Poniedziałek");
+break;
+}
+case 2:
+{
+document.write("Wtorek");
+break;
+}
+case 3:
+{
+document.write("Środa");
+break;
+}
+case 4:
+{
+document.write("Czwartek");
+break;
+}
+case 5:
+{
+document.write("Piątek");
+break;
+}
+case 6:
+{
+document.write("Sobota");
+break;
+}
+case 7:
+{
+document.write("Niedziela");
+break;
+}
+default:
+{document.write("Podałeś złą wartość");
+break;}
+}
+</script>
+</body>
+
+
+</html>

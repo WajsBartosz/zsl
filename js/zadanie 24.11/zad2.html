@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="PL" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form>
+      Podaj swój wzrost <input type="number" id="l1"><br><br>
+      <input type="button" id="guzik" value="wyślij"><br><br>
+    </form>
+    <span id=akapit></span>
+    <script>
+      function wzrost(l1)
+      {
+        if (l1<150)
+        {
+        return "jesteś niski";
+        }
+        else if(l1>=150 && l1<=180)
+        {
+          return "jesteś średni";
+        }
+        else if (l1>180)
+        {
+          return "jesteś wysoki";
+        }
+      }
+
+      var guzik=document.getElementById('guzik');
+      guzik.onclick=function()
+        {
+          var liczba1=parseInt(document.getElementById("l1").value);
+          var x= wzrost(liczba1);
+          akapit.innerHTML=x;
+        }
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="PL" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Zadanie kwadraty</title>
+    <style>
+      #pole{
+        height: 150px;
+        width: 600px;
+        border: 2px solid black;
+      }
+      #kwadrat1{
+        display: block;
+        position: relative;
+        left: 30px;
+        top: 30px;
+        width:75px;
+        height: 75px;
+        background-color: blue;
+        border: 4px solid darkblue;
+        float: left;
+        margin-right:30px;
+      }
+      #kwadrat2{
+        display: block;
+        position: relative;
+        left: 30px;
+        top: 30px;
+        width:75px;
+        height: 75px;
+        background-color: red;
+        border: 4px solid darkred;
+        float: left;
+        margin-right:30px;
+      }
+      #kwadrat3{
+        display: block;
+        position: relative;
+        left: 30px;
+        top: 30px;
+        width:75px;
+        height: 75px;
+        background-color: green;
+        border: 4px solid darkgreen;
+        float: left;
+        margin-right:30px;
+      }
+      #kwadrat4{
+        display: block;
+        position: relative;
+        left: 30px;
+        top: 30px;
+        width:75px;
+        height: 75px;
+        background-color: pink;
+        border: 4px solid purple;
+        float: left;
+        margin-right:30px;
+      }
+      #kwadrat5{
+        display: block;
+        position: relative;
+        left: 30px;
+        top: 30px;
+        width:75px;
+        height: 75px;
+        background-color: yellow;
+        border: 4px solid black;
+        float: left;
+        margin-right:30px;
+      }
+      h2{
+        margin-left: 10px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id=pole>
+        <div id=kwadrat1>
+          <h2>1</h2>
+        </div>
+        <div id=kwadrat2>
+          <h2>2</h2>
+        </div>
+        <div id=kwadrat3>
+          <h2>3</h2>
+        </div>
+        <div id=kwadrat4>
+          <h2>4</h2>
+        </div>
+        <div id=kwadrat5>
+          <h2>5</h2>
+        </div>
+    </div>
+    <script>
+      var kwadrat1=document.getElementById('kwadrat1');
+      var kwadrat2=document.getElementById('kwadrat2');
+      var kwadrat3=document.getElementById('kwadrat3');
+      var kwadrat4=document.getElementById('kwadrat4');
+      var kwadrat5=document.getElementById('kwadrat5');
+      kwadrat1.onmouseover=function(){
+        document.getElementById('kwadrat1').style.backgroundColor="yellow";
+        document.getElementById('kwadrat1').style.border="4px solid black";
+      }
+      kwadrat1.onmouseout=function(){
+        document.getElementById('kwadrat1').style.backgroundColor="blue";
+        document.getElementById('kwadrat1').style.border="4px solid darkblue";
+      }
+      kwadrat2.onmouseover=function(){
+        document.getElementById('kwadrat2').style.backgroundColor="blue";
+        document.getElementById('kwadrat2').style.border="4px solid darkblue";
+      }
+      kwadrat2.onmouseout=function(){
+        document.getElementById('kwadrat2').style.backgroundColor="red";
+        document.getElementById('kwadrat2').style.border="4px solid darkred";
+      }
+      kwadrat3.onmouseover=function(){
+        document.getElementById('kwadrat3').style.backgroundColor="red";
+        document.getElementById('kwadrat3').style.border="4px solid darkred";
+      }
+      kwadrat3.onmouseout=function(){
+        document.getElementById('kwadrat3').style.backgroundColor="green";
+        document.getElementById('kwadrat3').style.border="4px solid darkgreen";
+      }
+      kwadrat4.onmouseover=function(){
+        document.getElementById('kwadrat4').style.backgroundColor="green";
+        document.getElementById('kwadrat4').style.border="4px solid darkgreen";
+      }
+      kwadrat4.onmouseout=function(){
+        document.getElementById('kwadrat4').style.backgroundColor="pink";
+        document.getElementById('kwadrat4').style.border="4px solid purple";
+      }
+      kwadrat5.onclick=function(){
+        document.getElementById('kwadrat5').style.backgroundColor="blue";
+        document.getElementById('kwadrat5').style.border="4px solid darkblue";
+      }
+      kwadrat5.onmouseout=function(){
+        document.getElementById('kwadrat5').style.backgroundColor="yellow";
+        document.getElementById('kwadrat5').style.border="4px solid black";
+      }
+
+
+
+
+
+    </script>
+  </body>
+</html>

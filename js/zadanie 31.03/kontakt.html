@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="schortcut icon" href="favicon.png" type='images/png'>
+    <link rel="stylesheet" href="styl.css">
+    <title>Pogotowie komputerowe</title>
+</head>
+<body>
+    <div class=kontener>
+        <div class=baner>
+            <img src="animacja.gif">
+        </div>
+        <div class=blokmenu>
+            <a href="index.html">O nas</a>
+            <a href="kontakt.html">Kontakt</a>
+        </div>
+        <div class=blokglowny>
+            <h3>Formularz kontaktowy</h3>
+            <form>
+                Imię: <input type="text" id="imie"><br><br>
+                Nazwisko: <input type="text" id="nazwisko"><br><br>
+                E-mail: <input type="text" id="mail"><br><br>
+                Usługa: <select name=usluga id=usluga>
+                        <option value="naprawa komputera">naprawa komputera</option>
+                        <option value="odzyskiwanie danych">odzyskiwanie danych</option>
+                        <option value="problemy z oprogramowaniem">problemy z oprogramowaniem</option>
+                        <option value="konfiguracja sieci LAN">konfiguracja sieci LAN</option>
+                        <option value="inne">inne</option>
+                </select><br><br>
+                <input type="checkbox" checked>Wyślij kopię wiadomości</input><br><br>
+                <input type="reset" class="reset">
+                <input type="button" class="przycisk" id="przycisk" value="Prześlij">
+            </form>
+            <p id=akapit></p>
+        </div>
+        <div class=stopka>
+            <p>Autor strony: <b>Wajs Bartosz</b></p>
+        </div>
+
+    </div>
+    <script>
+        var przycisk=document.getElementById("przycisk");
+        przycisk.onclick=function(){
+            var imie=document.getElementById("imie").value;
+            var nazwisko=document.getElementById("nazwisko").value;
+            var mail=document.getElementById("mail").value;
+            var email=mail.toLowerCase();
+            var usluga=document.getElementById("usluga");
+            akapit.innerHTML=imie+" "+nazwisko+"<br>"+email+"<br>"+"Usługa: "+usluga.value;
+        }
+    </script>
+</body>
+</html>
