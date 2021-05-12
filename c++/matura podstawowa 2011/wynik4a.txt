@@ -1,0 +1,2 @@
+Liczb parzystych by³o: 105
+Liczb nieparzystych by³o: 95
