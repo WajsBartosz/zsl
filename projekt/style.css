@@ -1,0 +1,19 @@
+#register { 
+    margin: 0 auto;
+    padding-top: 20px;
+    width:250px;
+    text-align:center;
+    }
+#faillogin {
+    color: red;
+}
+body{
+    background-color: #b500a9;
+    background-image: url("https://www.transparenttextures.com/patterns/batthern.png");
+    font-family: Comic Sans MS, Comic Sans, cursive;
+}
+.container2{
+    background-color:rgb(196, 180, 180);
+    height:94vh;
+    padding:10px;
+}
